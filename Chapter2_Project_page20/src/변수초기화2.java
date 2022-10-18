@@ -33,7 +33,7 @@ public class 변수초기화2 {
         
         final int K=100; // 상수 (변경할 수 없는 수) ==> 상수는 모든 알파벳을 대문자로 사용한다
         
-        //commit test
+        //commit test2
         
 	}
 

@@ -70,7 +70,7 @@ public class 화면출력_printf {
 		System.out.printf("평균:%.2f\n", (85/3.0)); // 소수점, 간격을 설정
 		// %5d	%-5d  --> 3자리
 		System.out.printf("%5d%5d%5d\n", 90,80,70);
-		System.out.printf("%-5d%-5d%-5d\n", 90,80,70);
+		System.out.printf("%-5d%-5d%-5d\n", 90,80,70); // jdk 1.5 --> c언어 printf 모방
 		
 	}
 

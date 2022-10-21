@@ -18,12 +18,12 @@ public class 문제20 {
 		// 입력 문자가 대 소문자 상관 없이 'y' 혹은 'Y' 인지 물어볼 때               
 		System.out.print("계속 하시려면 y 혹은 Y를 입력하세요 : ");                
 		char ch2 = sc.next().charAt(0);                
-		System.out.println("영문자 y 혹은 Y인지 확인 : " + ( (ch2 == 'y' || ch2 == 'Y')? "맞습니다" : "아닙니다") );  
+		System.out.println("영문자 y 혹은 Y인지 확인 : " + ((ch2 == 'y' || ch2 == 'Y')? "맞습니다" : "아닙니다") );  
 		 // 알파벳 대문자 이거나 소문자인지 확인                
 		System.out.print("문자 하나 입력 : ");                
 		char ch3 = sc.next().charAt(0);               
 		 System.out.println("알파벳인지 확인 : " + (('a' <= ch3 && ch3 <='z') || ('A' <= ch3 && ch3 <= 'Z') ? "알파벳 입니다" : "알파벳이 아닙니다"));                
-
+		 
 	}
 
 }

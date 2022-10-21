@@ -19,7 +19,7 @@ public class 문제13 {
 		num2 = sc.nextInt();
 		num3 = sc.nextInt();
 		int result = num1 * num2 + num3;
-		System.out.printf("%d * %d + %d : %d 입니다", num1, num2, num3, result);
+		System.out.printf("%d * %d + %d = %d 입니다", num1, num2, num3, result);
 		
 		
 	}

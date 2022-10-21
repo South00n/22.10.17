@@ -12,8 +12,11 @@ public class 문제12 {
 	    num1 = sc.nextInt();
 	    num2 = sc.nextInt();
 
-	    System.out.println("입력한 두 수의 차는 " + (num1 - num2) + "입니다");
-	    System.out.println("입력한 두 수의 곱은 " + (num1 * num2) + "입니다");
+	    //System.out.println("입력한 두 수의 차는 " + (num1 - num2) + "입니다");
+	    //System.out.println("입력한 두 수의 곱은 " + (num1 * num2) + "입니다");
+	    
+	    System.out.printf("%d - %d = %d 입니다\n", num1, num2, num1-num2);
+	    System.out.printf("%d * %d = %d 입니다", num1, num2, num1*num2);
 	}
 
 }

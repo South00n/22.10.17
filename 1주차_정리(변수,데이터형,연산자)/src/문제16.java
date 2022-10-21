@@ -24,7 +24,7 @@ public class 문제16 {
 		total = kor + eng + math;
 		avg = total / 3.0;
 		
-		System.out.printf("국어 = %d점 영어 = %d점, 수학 = %d점, 합 = %d점 평균 = %.2f점 \n", kor, eng, math, total, avg);
+		System.out.printf("국어=%d점 영어=%d점 수학=%d점 총점=%d점 평균=%.2f점\n", kor, eng, math, total, avg);
 		System.out.println((kor >= 40 && eng >= 40 && math >= 40) && (avg >= 60)? "합격" : "불합격");
 	}
 

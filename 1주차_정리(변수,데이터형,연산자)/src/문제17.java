@@ -16,7 +16,7 @@ public class 문제17 {
 		int num;
 		num = sc.nextInt();
 		
-		System.out.println(num >= 0 ? "양수입니다" : "양수가아닙니다");
+		System.out.println(num > 0 ? "양수입니다" : "양수가 아닙니다");
 	}
 
 }

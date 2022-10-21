@@ -15,9 +15,9 @@ public class 문제14 {
 		
 		num1 = sc.nextInt();
 		num2 = sc.nextInt();
-		int result = num1 / num2;
+		int result = num1 % num2;
 		
-		System.out.printf("%d / %d = %d 입니다", num1, num2, result);
+		System.out.printf("%d %% %d = %d 입니다", num1, num2, result);
 	}
 
 }

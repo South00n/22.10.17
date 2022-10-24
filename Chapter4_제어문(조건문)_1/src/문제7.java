@@ -59,7 +59,7 @@ public class 문제7 {
 		System.out.println("평균은 " + avg + "입니다.");
 		System.out.println("학점은 " + grade + opt + "입니다.");
 		
-		
+		//test
 	}
 }
 

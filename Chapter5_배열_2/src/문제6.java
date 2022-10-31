@@ -7,7 +7,7 @@ public class 문제6 {
 		// TODO Auto-generated method stub
 		int[] num = { 94, 85, 95, 88, 90 };
 		
-		int max = 0;
+		int max = num[0];
 		int min = num[0];
 		
 		for (int i = 0; i < num.length; i++) {
@@ -18,8 +18,18 @@ public class 문제6 {
 				min = num[i];
 			}
 		}
-		System.out.println(max);
-		System.out.println(min);
+		/*
+		for (int i : num) {
+			if (max < i) {
+				max = i;
+			}
+			if (min > i) {
+				max = i;
+			}
+		}
+		*/
+		System.out.println("최대값 : " + max);
+		System.out.println("최소값 : " + min);
 	}
 
 }

@@ -9,6 +9,7 @@ public class 문제5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// 정수를 10개 저장하는 배열을 만들고
 		int[] arr = new int[10];
 		
 		int sum = 0;
@@ -19,7 +20,7 @@ public class 문제5 {
 		}
 		
 		System.out.println(Arrays.toString(arr));
-		System.out.println(sum / (double)arr.length);
+		System.out.printf("평균: %.2f\n", sum / (double)arr.length);
 	}
 
 }

@@ -99,7 +99,7 @@ public class 배열_6 {
 		System.out.println("0 => " + a);
 		System.out.println("1 => " + b);
 		System.out.println("2 => " + d);
-		//t
+		
 	}
 
 }

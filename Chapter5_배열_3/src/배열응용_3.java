@@ -33,6 +33,8 @@ public class 배열응용_3 {
 				}
 			}
 		}
+		
+		int count = 0;
 		// System.out.println(Arrays.toString(com));
 		Scanner sc = new Scanner(System.in);
 		while (true) {
@@ -60,6 +62,9 @@ public class 배열응용_3 {
 				System.out.println("0은 사용할 수 업습니다");
 				continue;
 			}
+			
+			count++;
+			
 			int s = 0, b = 0; // s=> 같은자리, b-= 다른다리
 			// 비교
 			for (int i = 0; i < 3; i++) { // com
@@ -87,6 +92,7 @@ public class 배열응용_3 {
 			System.out.println("\n======================");
 			// 종료여부 확인
 			if (s == 3) {
+				System.out.println("입력횟수 : " + count);
 				System.out.println("Game Over");
 				break;
 			}

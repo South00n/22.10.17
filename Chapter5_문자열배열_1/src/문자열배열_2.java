@@ -21,6 +21,36 @@ public class 문자열배열_2 {
 			System.out.println((i+1) + "." + books[i]);
 		}
 		System.out.println("=============================");
+		// 2. 검색 : cointains
+		Scanner sc = new Scanner(System.in);
+		System.out.print("검색어 입력:");
+		String fd = sc.next();
+		for (String book : books) {
+			if (book.contains(fd)) { // 결과값 (true/false)
+				System.out.println(book);
+			}
+		}
+		//===================================== 서제스트
+		//3. 시작문자 / 끝문자 --> 자동완성기
+		System.out.println("====== startsWITH ======"); // LIKE 'Java% // Java로 시작하는 모든 문자 in Oracle
+		for (String book : books) {
+			if (book.startsWith(fd)) {
+				System.out.println(book);
+			}
+		}
+		System.out.println("====== endsWITH ======");
+		for (String book : books) {
+			if (book.endsWith(fd)) {
+				System.out.println(book);
+			}
+		}
 	}
 
 }
+
+
+
+
+
+
+

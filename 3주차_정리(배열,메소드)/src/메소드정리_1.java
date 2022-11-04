@@ -66,13 +66,77 @@
  *    		1. 동작 과정(행위) // 어떤걸 클릭했을때 무슨 화면이 나오는지
  *    		2. 화면에 출력된 내용 : 리턴형
  *    		3. 사용자에게 유도 : 매개변수
- *    		
+ *    		-----------------------
+ *    
+ *    예) 
+ *    	  1 ~ 10까지 출력하는 메소드를 만들어라 --> 메소드 자체에서 처리 (리턴형x, 매개변수x)
+ *		  
+ *		  1 ~ 10까지 합을 구하라 --> (리턴형o 매개변수x)
+ *
+ *    	  1 ~ n까지 합을 구하라 --> (리턴형o 매개변수o)
+ *    
+ *    	  사용자로부터 단을 받아서 해당 단을 출력 --> (리턴형x 매개변수o)
+ *    							   ---- 메소드 자체 처리 (void)
+ *    
+ *    	  매개변수는 사용자로부터 받은 값
+ *    	  --> Scanner : 매개변수
+ *    	  --> 웹, 윈도우 : 입력창 (검색, 로그인, 회원가입 ..)
+ *    	  사용자가 요구할때 (구해라) --> 매개변수 존재
  */
 public class 메소드정리_1 {
-
+	// 1 ~ 10까지 출력하는 메소드를 만들어라 --> 1 ~ 10까지 출력하는 기능
+	static void print() {
+		for (int i = 1; i <= 10; i++) {
+			System.out.print(i + " ");
+		}
+	}
+	
+	//  1 ~ 10까지 합을 구하라 (범위가 지정되면 -> 매개변수는 존재하지 않는다)
+	static int hap() {
+		int sum = 0;
+		for (int i = 1; i <= 10; i++) {
+			sum += i;
+		}
+		return sum;
+	}
+	
+	//  1 ~ n까지 합을 구하라
+	static int hap2(int n) {
+		int sum = 0;
+		for (int i = 1; i <= n; i++) {
+			sum += i;
+		}
+		return sum;
+	}
+	
+	// 사용자로부터 단을 받아서 해당 단을 출력
+	static void gugudan(int dan) {
+		for (int i = 1; i <= 9; i++) {
+			System.out.printf("%d * %d = %d\n", dan, i, dan * i);
+		}
+		return; // 생략이 가능
+	}
+	// main() --> 프로그램의 시작점
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		// 메소드 호출 --> 메소드명(매개변수값..); --> void인 경우
+		// 리턴형 --> 데이터형(리턴형의 데이터형) 변수 = 메소드명(매개변수값..);
+		// System.out.println(메소드명());
+		/*
+		 *    메소드는 호출하면 처음부터 return이 있는 곳까지 수행 --> 호출한 위치로 다시 복귀
+		 */
+		print(); // 리턴형x 매개변수x
+		System.out.println();
+		
+		int sum = hap(); // 리턴형o 매개변수x
+		System.out.println(sum);
+		System.out.println(hap());
+		
+		int sum2 = hap2(100); // 리턴형o 매개변수o
+		System.out.println(sum2);
+		System.out.println(hap2(100));
+		
+		gugudan(7); // 리턴형x 매개변수o
 	}
 
 }

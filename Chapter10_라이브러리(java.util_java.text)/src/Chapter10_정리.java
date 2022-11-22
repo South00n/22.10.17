@@ -1,3 +1,6 @@
+import java.lang.reflect.InvocationTargetException;
+
+
 /*
  * 	   날짜 / 시간 (10장)
  * 
@@ -41,12 +44,46 @@
  *     ============> isAfter(), isBefore(), isEqual()
  *     ============> between
  * 		
+ * 
+ * 	   ----------------------------------------------------------------------------
+ * 	   = 가독성 : 분리 (기능별) => 구조화된 프로그램 (단락을 나눠서 처리) => 메소드가 중심
+ * 				유지보수 (수정, 추가)
+ * 				========> 리팩토링
+ *     = 최적화 : 속도(실행)
+ *     		    브라우저 => 쓰레드 2개 (이미지, 텍스트) => + , StringBuffer => 오라클 (index)
+ *     = 결합성(의존성) : 클래스 수정시 => 다른 클래스에 영향
+ *     				 ----------    ------------- 결합성이 낮은 프로그램이 좋다
+ *     											 new보단 리플렉션
+ *     = 응집성 : 메소드는 한개의 기능만 수행하게 만든다 (재사용성, 오류처리에 좋다)
+ *     = 재사용성 : 상속, 포함
+ * 
+ * 	   객체얻기
+ * 	   1) getClass()
+ * 	   2) class
+ *     3) Class.forName()
+ *     4) new
+ * 
  */
+class A {
+	int i = 10;
+	
+	public void display() {
+		System.out.println("아아아");
+	}
+}
+
 public class Chapter10_정리 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-
+		A a1 = new A();
+		System.out.println(a1.i);
+		A a2 = new A().getClass().getDeclaredConstructor().newInstance();
+		System.out.println(a2.i);
+		A a3 = A.class.getDeclaredConstructor().newInstance();
+		System.out.println(a3.i);
+		A a4 = (A) Class.forName("A").getDeclaredConstructor().newInstance();
+		a4.display();
 	}
 
 }

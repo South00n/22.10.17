@@ -1,4 +1,10 @@
 package com.sist.main;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.StringTokenizer;
+
 /*
  * 	  1. 데이터 저장
  * 		 **한개 저장 : 변수
@@ -84,7 +90,7 @@ package com.sist.main;
  *         				}
  *         			
  *         				1) Human h = new Human(); // 직접적으로 연결 => 결합성이 높은 프로그램 (나중에 잘 안씀)
- *         				2) Human h2 = new Human().getClasss().getDeclaredConstructor().newInstance()
+ *         				2) Human h2 = new Human().getClass().getDeclaredConstructor().newInstance()
  *         				3) Human h3 = Human.class.getDeclaredConstructor().newInstance()
  *         				*** 4) Human h4 = (Human)Class.forName("Human")
  *         						=> 변수/메소드 제어 (리플렉션)
@@ -183,6 +189,7 @@ package com.sist.main;
  * 
  * 		  String sql = "INSERT INTO member VALUES('" + name + "','" + sex + "','" + addr + "',"...)
  */
+
 public class MainClass {
 
 	public static void main(String[] args) {

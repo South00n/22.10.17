@@ -1,4 +1,6 @@
 package com.sist.io;
+import java.io.File;
+import java.text.SimpleDateFormat;
 /*
  * 	  1. 스트림 : 데이터 이동 통로
  * 				Queue (FIFO)
@@ -75,10 +77,9 @@ package com.sist.io;
  * 						write(byte[], int, int)
  * 				 ----> 컴파일 예외처리 ==> 반드시 예외처리를 한다
  * 
- */ // 869page
-import java.util.*;
-import java.io.*;
-import java.text.SimpleDateFormat;
+ */
+// 869page
+import java.util.Date;
 
 public class MainClass_IO {
 
